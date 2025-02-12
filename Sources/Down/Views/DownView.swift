@@ -219,7 +219,7 @@ extension DownView: WKNavigationDelegate {
         decisionHandler(.allow)
     }
 
-    public func webView(_ webView: WKWebView,
+    open func webView(_ webView: WKWebView,
                         decidePolicyFor navigationAction: WKNavigationAction,
                         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
@@ -250,7 +250,7 @@ extension DownView: WKNavigationDelegate {
         #endif
     }
 
-    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    open func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         didLoadSuccessfully?()
     }
 
